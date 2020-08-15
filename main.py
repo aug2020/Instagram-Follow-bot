@@ -17,7 +17,7 @@ class myInstaBot:
         sleep(2)
         self.driver.find_element_by_xpath("/html/body/div[4]/div/div/div[3]/button[2]").click() # this clicks on the not now for notifications
         sleep(2)
-     def get_followers(self, fname, uname, pw): # a method to being following the accounts
+     def get_followers(self, fname, uname, pw): # this method gets all the followers from the given account and begins to follow them
         L = instaloader.Instaloader()
         L.login(uname, pw)
         L.save_session_to_file('session.txt')
@@ -32,8 +32,8 @@ class myInstaBot:
          self.driver.find_element_by_xpath("//*[text()='Follow']").click()
          sleep(2)
 
-my_bot = myInstaBot('username', 'password', 'account to take followers name')
-my_bot.get_followers('account to take followers name','username', 'password')
+my_bot = myInstaBot('username', 'password', 'account to take followers name') #place your username and password and the account name of a page with alot of followers
+my_bot.get_followers('account to take followers name','username', 'password') #
 
 
 
